@@ -1,0 +1,374 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  background-color: #111;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header (Sticky) */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  padding: 20px 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo img {
+  width: 150px;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+
+header nav ul li {
+  margin-left: 30px;
+}
+
+header nav ul li a {
+  color: #fff;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+header nav ul li a:hover {
+  color: #ff6600;
+}
+
+/* Hamburger Menu */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-icon span {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+}
+
+/* Mobile Navigation (Dropdown) */
+#nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+#nav-links li {
+  list-style: none;
+}
+
+#nav-links li a {
+  color: white;
+}
+
+#nav-links {
+  display: flex;
+}
+
+#nav-links.show {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  /* On small screens, hide the navigation and add the hamburger menu */
+  header nav ul {
+    display: none;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+
+  #nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 250px;
+    transition: right 0.3s ease-in-out;
+    padding-top: 100px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #nav-links li {
+    margin: 20px 0;
+  }
+
+  #nav-links.show {
+    right: 0;
+  }
+
+  #nav-links li a {
+    font-size: 1.5rem;
+  }
+}
+
+/* Hero Section */
+.hero {
+  background: url('hero-background.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-image-container {
+  width: 100%;
+  max-width: 300px; /* Limit the width */
+  margin-bottom: 20px; /* Space between image and text */
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* Optional: Adds rounded corners to the image */
+}
+
+/* Hero Content (Text) */
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.cta-btn {
+  padding: 15px 30px;
+  background-color: #ff6600;
+  color: #fff;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.cta-btn:hover {
+  background-color: #e65c00;
+}
+
+
+/* Other Sections (About, Services, Contact) */
+.about-section,
+.services-section,
+.contact-section {
+  padding: 80px 0;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+/* Services Section */
+.services-section {
+  padding: 80px 0;
+  background-color: #111;
+  text-align: center;
+}
+
+.services-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.services-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* Allows the items to wrap into the next row when screen size reduces */
+}
+
+.service-card {
+  background-color: #222;
+  padding: 40px 20px;
+  width: 30%; /* Make each card take up 30% of the width */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.service-card p {
+  font-size: 1.1rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columns for smaller screens */
+    gap: 20px;
+  }
+
+  .service-card {
+    width: 100%; /* Make each card take up full width in mobile view */
+  }
+}
+
+@media (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr; /* 1
+
+/* Contact Section */
+.contact-section {
+  padding: 80px 0;
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+/* Contact Box Styling */
+.contact-box {
+  max-width: 600px;
+  width: 100%;
+  background-color: #222;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#contact-form label {
+  font-size: 1.2rem;
+  color: #ff6600; /* Bright color to highlight labels */
+  margin-bottom: 5px;
+  text-align: left; /* Align labels to the left */
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  font-size: 1rem;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  border-color: #ff6600;
+  outline: none;
+}
+
+#contact-form button {
+  padding: 15px 30px;
+  background-color: #ff6600;
+  color: #fff;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+  background-color: #e65c00;
+}
+
+/* Responsiveness for mobile devices */
+@media (max-width: 768px) {
+  .contact-box {
+    padding: 20px;
+  }
+
+  #contact-form input,
+  #contact-form textarea {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+
+  #contact-form button {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-box {
+    width: 90%; /* Make form box take more space on smaller screens */
+  }
+
+  #contact-form input,
+  #contact-form textarea {
+    font-size: 1rem;
+  }
+
+  #contact-form button {
+    padding: 15px 20px;
+    font-size: 1rem;
+  }
+}
+
+
+
+footer {
+  background-color: #111;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 1rem;
+}
