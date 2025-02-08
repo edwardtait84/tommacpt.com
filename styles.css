@@ -6,9 +6,9 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: font_9 wixui-rich-text_text;
   color: #fff;
-  background-color: #111;
+  background-color: #404040;
   scroll-behavior: smooth;
 }
 
@@ -28,7 +28,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: black;
   z-index: 1000;
   padding: 20px 0;
 }
@@ -40,7 +40,7 @@ header .container {
 }
 
 header .logo img {
-  width: 150px;
+  width: 100px;
 }
 
 header nav {
@@ -150,6 +150,7 @@ header nav ul li a:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-color: #BFB69C;
 }
 
 .hero-image-container {
@@ -177,7 +178,7 @@ header nav ul li a:hover {
 
 .cta-btn {
   padding: 15px 30px;
-  background-color: #ff6600;
+  background-color: #989B81;
   color: #fff;
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -186,7 +187,7 @@ header nav ul li a:hover {
 }
 
 .cta-btn:hover {
-  background-color: #e65c00;
+  background-color: #33322A;
 }
 
 
@@ -196,6 +197,7 @@ header nav ul li a:hover {
 .contact-section {
   padding: 80px 0;
   text-align: center;
+  background-color: #848B94;
 }
 
 h2 {
@@ -206,7 +208,7 @@ h2 {
 /* Services Section */
 .services-section {
   padding: 80px 0;
-  background-color: #111;
+  background-color: #989B81;
   text-align: center;
 }
 
