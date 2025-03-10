@@ -105,6 +105,8 @@ header nav ul li a:hover {
   display: block;
 }
 
+<!--
+
 @media screen and (max-width: 768px) {
   /* On small screens, hide the navigation and add the hamburger menu */
   header nav ul {
@@ -140,6 +142,8 @@ header nav ul li a:hover {
     font-size: 1.5rem;
   }
 }
+
+-->
 
 /* Hero Section */
 .hero {
